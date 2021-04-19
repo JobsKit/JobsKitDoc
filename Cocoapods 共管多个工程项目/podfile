@@ -1,0 +1,19 @@
+workspace 'A.xcworkspace'
+xcodeproj 'A/A.xcodeproj'
+
+workspace 'B.xcworkspace'
+xcodeproj 'B/B.xcodeproj'
+
+target 'A' do
+  platform :ios, '9.0'
+  xcodeproj 'A/A.xcodeproj'
+  pod 'AFNetworking'
+
+end
+
+target 'B' do
+  platform :ios, '9.0'
+  xcodeproj 'B/B.xcodeproj'
+  pod 'AFNetworking'
+
+end
