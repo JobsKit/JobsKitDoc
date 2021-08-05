@@ -1,0 +1,1 @@
+sourceTree 推送不上去 执行 rm .git/hooks/pre-push
