@@ -1,0 +1,3 @@
+在更换自己用过电脑,或公司电脑与个人电脑中时，只要将 ~/Library/Developer/X
+code/UserData/CodeSnippets 里面的文件全部复制到对应的
+CodeSnippets里就行.
