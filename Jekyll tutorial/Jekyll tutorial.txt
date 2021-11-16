@@ -1,0 +1,31 @@
+
+
+Jekyll搭建写作环境
+
+【主要参考资料】
+https://github.com/GSmoke/GSmoke.github.io
+https://www.jianshu.com/p/12e7e1f8007e
+
+【主要命令行】
+gem install eventmachine -- --with-cppflags=-I/usr/local/opt/openssl/include 
+brew install openssl
+
+【安装可能缺失的插件，下载完成以后需要编译】
+gem install pygments.rb
+gem install redcarpet
+定位于存在_config.yml文件的目录下面 ==> 现在编译Jekyll build
+
+以上命令运行完毕以后 ，执行以下命令 ==>  
+
+gem install jekyll
+gem install bundler jekyll
+jekyll new my-awesome-site
+gem install bundler gem install minima
+bundle add webrick
+
+
+在yujianbin.github.io/ 目录下， 开启本地服务
+$ jekyll server
+
+没有报错以后，在浏览器页面上输入 ==> 
+http://127.0.0.1:4000/
