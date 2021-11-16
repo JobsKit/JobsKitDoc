@@ -1,2 +1,0 @@
-sourceTree 推送不上去 执行 rm .git/hooks/pre-push
-本地已经commit但是没有push，需要回退到commit，那么需要：git revert 上一个节点的id值

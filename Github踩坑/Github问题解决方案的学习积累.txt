@@ -1,0 +1,6 @@
+【问题描述】ERROR: Authentication error: Authentication required: You must have push access to verify locks 或者 sourceTree 推送不上去 或者 git push执行失败
+【解决方案】rm .git/hooks/pre-push
+
+【问题描述】
+本地已经commit但是没有push，需要回退到commit
+【解决方案】git revert 上一个节点的id值
