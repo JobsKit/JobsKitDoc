@@ -1,9 +1,5 @@
-*.a       # 忽略所有 .a 结尾的文件                        
-!lib.a    # 但 lib.a 除外                       
-/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO          
-build/    # 忽略 build/ 目录下的所有文件                        
-doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txtii
-
+                 
+# Xcode 上传到Github的忽略文件
 =============================================================
 
 # For Xcode
@@ -49,10 +45,12 @@ DerivedData.idea/
 
 *.xcbkptlist
 
+*.hmap
+
 =============================================================
 
-＃ Xcode 编译环节的中间件、类库文件
-
+# Xcode 编译环节的中间件、类库文件
+*.a!lib.a # 忽略所有 .a 结尾的文件，但 lib.a 除外
 *.o,
 *.lo,
 *.la,
@@ -72,14 +70,13 @@ DerivedData.idea/
 .#*,
 .*.swp
 
+/TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO          
+build/    # 忽略 build/ 目录下的所有文件                        
+doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txtii
+
 =============================================================
 
-＃ Objective-C / Swift特定
-* .hmap
-
-=============================================================
-
-＃ 应用程序包装
+# 应用程序包装
 * .ipa
 * .dSYM.zip
 * .dSYM
