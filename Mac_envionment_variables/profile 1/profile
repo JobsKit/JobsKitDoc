@@ -1,0 +1,56 @@
+# 1、sudo vim /etc/profile	打开
+# 2、source /etc/profile	使其生效
+
+# System-wide .profile for sh(1)
+
+if [ -x /usr/libexec/path_helper ]; then
+        eval `/usr/libexec/path_helper -s`
+fi
+
+if [ "${BASH-no}" != "no" ]; then
+        [ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+# ------ Setting Java env.Vars ------
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"
+
+export JRE_HOME=${JAVA_HOME}/jre
+
+export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar:${JRE_HOME}/lib
+
+CLASS_PATH="$JAVA_HOME/lib"
+
+PATH=".$PATH:$JAVA_HOME/bin"
+
+# ------ Setting HADOOP env.Vars ------
+
+export HADOOP_HOME=/Users/whiskey_on_the_rocks/Hadoop/hadoop-3.0.3
+
+export PATH=$PATH:$HADOOP_HOME
+
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib:$HADOOP_COMMON_LIB_NATIVE_DIR"
+
+PATH=".$PATH:$HADOOP_HOME/bin":".$PATH:$HADOOP_HOME/sbin" #两个命令文件夹
+
+# ------ Setting MySQL ------
+
+alias mysql='/usr/local/mysql/bin/mysql'
+
+# ------ Setting Maven ------
+
+export MAVEN_HOME=/Library/Maven/apache-maven-3.5.4
+
+PATH=".$PATH:$MAVEN_HOME/bin"
+
+# ------ Setting Homebrew ------
+
+export Homebrew_PATH=/usr/local/bin
+
+PATH=".$PATH:$Homebrew_PATH"
+
+# ------ Setting THEOS ------
+
+export THEOS=/opt/theos export PATH=/opt/theos/bin/:$PATH
